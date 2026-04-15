@@ -55,6 +55,28 @@ $$
 There are the below properties of _Brownian Motion_:
  - $X(0) = 0$ almost surely.
  - $t -> X(t)$ is continuous everywhere and differentiable nowhere.
- - $dX(t) = X(t + dt) - X(t) ~ N(0,dt)$, and that Brownian motion increments are independant.
+ - $dX(t) = X(t + dt) - X(t) ~ N(0,dt)$, and that Brownian motion increments are independant, and Gaussian.
  - Brownian motion is a stochastic process, _i.e._, $\{X(t):t\in \mathcal{R}^+\}$
-        
+
+Thus, giving $t>s$, we get $X(t) - X(s) ~ N(0,|t-s|)$
+
+## Rules of Stochastic Calculus
+We don't work with the usual rules of caluclus, instead we work with _stochastic differential equations_.
+These take the form:
+$$
+    dF = \square dt + \square dX
+$$
+
+### Itô's Formulas
+#### Itô I
+This comes from a Taylor expansion, ignoring all of the higher order terms.
+$$
+    dF = \frac{dF}{dX}dX + \frac{d^2F}{2dX^2} dt
+$$
+Since we can replace $dX^2$ with $dt$ as our timesteps get smaller.
+
+#### Itô II
+Now we do the same Taylor expansion, but this time in two variables, $t$ and $X_t$.
+$$
+dF = \left(\frac{\partial F}{\partial t} + \frac{\partial^2 F}{2\partial X_t^2}\right) dt + \frac{\partial F}{\partial X_t} dX
+$$
