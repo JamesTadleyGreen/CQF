@@ -12,20 +12,14 @@ jupyter:
     name: python3
 ---
 
+## Introduction
+In this report we are going to calulate the value of the discounted payoff under the risk-neutral density $\mathbb{Q}$.
+This has a value $V(S,t)$ where $S$ is the price of the underlying, and $t$ is time, of;
+$$
+    V(S,t) = e^{-r(T-t)}\mathbb{E}^\mathbb{Q}[\text{Payoff}]
+$$
+
 
 ```python
-import matplotlib.pyplot as plt
-import numpy as np
-
-x = np.linspace(0, 10, 100)
-y = np.sin(x)
-
-plt.figure(figsize=(8, 4))
-plt.plot(x, y)
-plt.title('Simple Sine Wave')
-plt.xlabel('X')
-plt.ylabel('sin(X)')
-plt.grid(True)
-plt.show()
+1+1+1
 ```
-
